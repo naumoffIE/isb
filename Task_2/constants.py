@@ -10,16 +10,8 @@ RUS_FREQ = {
     'Щ': 0.003625, 'Э': 0.002416, 'Ъ': 0.000000
 }
 
-DECRYPT_KEY = {
-    '-': ' ', 'U': 'о', 'B': 'т', 'V': 'э', 'd': 'е', 'R': 'г', 'A': 'к',
-    '9': 'р', 'K': 'м', 'h': 'у', 'I': 'д', 'O': 'ф', 'M': 'и', 'E': 'в',
-    '8': 'ы', '>': 'н', '3': 'с', 'Y': 'а', '$': 'х', 'F': 'ш', '!': 'б',
-    'Q': 'п', 'L': 'ч', 'C': 'ю', 'W': 'й', 't': 'л', '=': 'ц', 'G': 'ь',
-    'J': 'з', 'P': 'я', 'Z': 'ж', 'n': 'щ', 'x': 'ъ'
-}
-
 PATH_TO_ENCRYPTED_TEXT = "encrypted_text.txt"
 
 PATH_TO_WRITE_DECRYPTED_TEXT_FILE = "decrypted_text.txt"
 
-PATH_TO_WRITE_KEY = "decrypt_key.txt"
+PATH_TO_WRITE_KEY = "decrypt_key.json"
