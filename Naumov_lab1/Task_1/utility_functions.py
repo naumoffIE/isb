@@ -32,6 +32,9 @@ def read_file(filename: str) -> str:
 def repeat_key(text: str, key: str) -> str:
     """
     Repeats the key to the length of the text
+    :param: text: text
+    :param: key: keyword
+    :return: number of key repeating
     """
     return (key * (len(text) // len(key) + 1))[:len(text)]
 

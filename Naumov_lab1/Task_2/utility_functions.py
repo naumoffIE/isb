@@ -62,6 +62,7 @@ def calculate_freq_letter_occurrence(text: str) -> dict[str, float]:
 def read_json(filename: str) -> dict:
     """
     Reads the content from a .json .
+    :param: filename: file name
     """
     try:
         with open(filename, "r", encoding="utf-8") as f:
