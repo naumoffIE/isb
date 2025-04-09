@@ -8,8 +8,11 @@ def write_to_file(filename: str, content: str) -> None:
     :param: filename: The name of the file to write to.
     :param: content: The content to be written.
     """
-    with open(filename, 'w', encoding='utf-8') as file:
-        file.write(content)
+    try:
+        with open(filename, 'w', encoding='utf-8') as file:
+            file.write(content)
+    except Exception as e:
+        print(f"Error on file record {filename}: {e}")
 
 
 def read_file(filename: str) -> str:
@@ -19,8 +22,11 @@ def read_file(filename: str) -> str:
     :param: filename: The name of the file to read.
     :return: The content of the file as a string.
     """
-    with open(filename, "r", encoding="utf-8") as file:
-        return file.read()
+    try:
+        with open(filename, "r", encoding="utf-8") as file:
+            return file.read()
+    except Exception as e:
+        print(f"Error on reading {filename}: {e}")
 
 
 def calculate_freq_letter_occurrence(text: str) -> dict[str, float]:
@@ -30,17 +36,27 @@ def calculate_freq_letter_occurrence(text: str) -> dict[str, float]:
     :param: text: The input text.
     :return: A dictionary with characters as keys and their frequency (as percentage) as values.
     """
-    char_count: dict[str, int] = {}
-    text_len: int = len(text)
 
-    for char in text:
-        char_count[char] = char_count.get(char, 0) + 1
+    try:
+        if not isinstance(text, str):
+            raise TypeError("Input must be a string.")
+        if len(text) == 0:
+            raise ValueError("Input text must not be empty.")
 
-    char_freq: dict[str, float] = {
-        char: count / text_len for char, count in char_count.items()
-    }
+        char_count: dict[str, int] = {}
+        text_len: int = len(text)
 
-    return char_freq
+        for char in text:
+            char_count[char] = char_count.get(char, 0) + 1
+
+        char_freq: dict[str, float] = {
+            char: count / text_len for char, count in char_count.items()
+        }
+
+        return char_freq
+
+    except (TypeError, ValueError) as e:
+        print(f"Error: {e}")
 
 
 def read_json(filename: str) -> dict:
