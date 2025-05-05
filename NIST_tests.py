@@ -1,5 +1,7 @@
 import math
+
 from scipy.special import gammaincc
+
 
 def frequency_test(bit_sequence: str) -> float:
     """
