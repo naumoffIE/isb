@@ -35,10 +35,10 @@ def runs_test(bit_sequence: str) -> float:
     """
     proportion_ones = bit_sequence.count('1') / len(bit_sequence)
 
-    if abs(proportion_ones - 0.5) >= 2 / math.sqrt(len(bit_sequence)):
+    if abs(proportion_ones - 0.5) >= (2 / math.sqrt(len(bit_sequence))):
         return 0.0
 
-    num_runs = sum(1 for i in range(len(bit_sequence) - 1) if bit_sequence[i] != bit_sequence[i + 1]) + 1
+    num_runs = sum(1 for i in range(len(bit_sequence) - 1) if bit_sequence[i] != bit_sequence[i + 1])
 
     expected_runs = 2 * len(bit_sequence) * proportion_ones * (1 - proportion_ones)
     std_dev = 2 * math.sqrt(2 * len(bit_sequence)) * proportion_ones * (1 - proportion_ones)
