@@ -1,5 +1,5 @@
-from NIST_tests import *
 import constants
+from NIST_tests import *
 
 
 def read_file(filepath: str) -> str:
@@ -58,8 +58,8 @@ def main() -> None:
     Runs NIST statistical tests on binary sequences from C++ and Java,
     and writes the results to an output file.
     """
-    cpp_sequence = read_file(constants.bin_seq_cpp)
-    java_sequence = read_file(constants.bin_seq_java)
+    cpp_sequence = read_file(constants.BIN_SEQ_CPP)
+    java_sequence = read_file(constants.BIN_SEQ_JAVA)
 
     frequency_cpp = frequency_test(cpp_sequence)
     frequency_java = frequency_test(java_sequence)
@@ -74,7 +74,7 @@ def main() -> None:
         frequency_cpp, frequency_java,
         runs_cpp, runs_java,
         longest_run_cpp, longest_run_java,
-        constants.result
+        constants.RESULT
     )
 
 
