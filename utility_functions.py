@@ -1,4 +1,5 @@
 from os import urandom
+from constants import *
 
 
 def generate_3des_key(length_bits: int) -> bytes:
