@@ -1,2 +1,0 @@
-VALID_KEY_LENGTHS = [64, 128, 192]
-BLOCK_SIZE = 8  # Block size for 3DES

@@ -1,0 +1,8 @@
+{
+  "private_key_path": "private_key.pem",
+  "public_key_path": "public_key.pem",
+  "encrypted_sym_key_path": "encrypted_3des_key.txt",
+  "input_file": "large_text.txt",
+  "encrypted_output": "encrypted_output.txt",
+  "decrypted_output": "decrypted_output.txt"
+}
