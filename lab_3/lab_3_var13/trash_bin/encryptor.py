@@ -4,10 +4,11 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 
 import base64
-from utility_functions import unpad, read_file
+from utility_functions import pad
+from work_with_files import read_file
 
 
-class Decryptor:
+class Encryptor:
     def __init__(self, private_key_path: str, encrypted_key_path: str):
         self.private_key_path = private_key_path
         self.encrypted_key_path = encrypted_key_path
@@ -26,20 +27,20 @@ class Decryptor:
             padding.OAEP(mgf=padding.MGF1(hashes.SHA256()), algorithm=hashes.SHA256(), label=None)
         )
 
-    def decrypt(self, input_file: str, output_file: str) -> None:
-        """Decrypt the file using 3DES and save the plaintext."""
+    def encrypt(self, input_file: str, output_file: str) -> None:
+        """Encrypt the file using 3DES and save the result."""
         print("Decrypting symmetric key...")
         key = self._load_symmetric_key()
 
-        print("Decrypting data with 3DES...")
-        ciphertext = read_file(input_file)
+        print("Encrypting data with 3DES...")
+        data = read_file(input_file)
+        padded = pad(data)
 
         cipher = Cipher(algorithms.TripleDES(key), modes.ECB(), backend=default_backend())
-        decryptor = cipher.decryptor()
-        padded_plaintext = decryptor.update(ciphertext) + decryptor.finalize()
-        plaintext = unpad(padded_plaintext)
+        encryptor = cipher.encryptor()
+        ciphertext = encryptor.update(padded) + encryptor.finalize()
 
         with open(output_file, "wb") as f:
-            f.write(plaintext)
+            f.write(ciphertext)
 
-        print("Data has been decrypted successfully.")
+        print("Data has been encrypted successfully.")

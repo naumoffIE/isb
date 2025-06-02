@@ -1,5 +1,3 @@
-from os import urandom
-
 from cryptography.hazmat.primitives import padding as sym_padding
 
 from constants import BLOCK_SIZE
@@ -17,7 +15,20 @@ def unpad(data: bytes) -> bytes:
     return unpadder.update(data) + unpadder.finalize()
 
 
-def read_file(path: str) -> bytes:
-    """Read binary content of a file."""
-    with open(path, "rb") as f:
-        return f.read()
+def ask_key_length() -> int:
+    print("Choose 3DES key length:")
+    print("1 - 64 bits")
+    print("2 - 128 bits")
+    print("3 - 192 bits")
+
+    choice = input("Enter option (1/2/3): ").strip()
+    if choice == "1":
+        return 8
+    elif choice == "2":
+        return 16
+    elif choice == "3":
+        return 24
+    else:
+        print("Invalid choice, defaulting to 192-bit key.")
+        return 24
+

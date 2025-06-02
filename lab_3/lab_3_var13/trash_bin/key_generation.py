@@ -12,11 +12,7 @@ class KeyGenerator:
         self.pub_key_path = pub_key_path
         self.encrypted_key_path = encrypted_key_path
 
-    def generate_3des_key(self) -> bytes:
-        """Generate a 3DES key of the specified byte length (8, 16, or 24)."""
-        if self.sym_key_length not in (8, 16, 24):
-            raise ValueError("Invalid 3DES key length. Must be 8, 16, or 24 bytes.")
-        return urandom(self.sym_key_length)
+
 
     def generate(self) -> None:
         """Generate RSA key pair and encrypt 3DES key with the public key."""
