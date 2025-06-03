@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="379d1545-7efa-4dae-ab17-5ae76f8a9d8e" name="Changes" comment="added a trash_bin directory(contains decryptor.py and encryptor.py files), re-written the files decryptor.py, encryptor.py, key_generation.py and utility_functions.py into the files asymmetric_encryption, symmetric_encryption and work_with_files." />
+    <list default="true" id="379d1545-7efa-4dae-ab17-5ae76f8a9d8e" name="Changes" comment="key_generation.py, decryptor.py and encryptor.py moved to trash_bin directory">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_3/lab_3_var13/trash_bin/decryptor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_3/lab_3_var13/trash_bin/encryptor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_3/lab_3_var13/trash_bin/key_generation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_3/lab_3_var13/utility_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_3/lab_3_var13/utility_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_3/lab_3_var13/work_with_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_3/lab_3_var13/work_with_files.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1748896886972</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="key_generation.py, decryptor.py and encryptor.py moved to trash_bin directory">
+      <created>1748897304499</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748897304499</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +176,7 @@
     <MESSAGE value="changing the type of the decryptor and the encryptor to template class files, adding requirements.txt file, adding config.json" />
     <MESSAGE value="keys, encrypted and decrypted text files" />
     <MESSAGE value="added a trash_bin directory(contains decryptor.py and encryptor.py files), re-written the files decryptor.py, encryptor.py, key_generation.py and utility_functions.py into the files asymmetric_encryption, symmetric_encryption and work_with_files." />
-    <option name="LAST_COMMIT_MESSAGE" value="added a trash_bin directory(contains decryptor.py and encryptor.py files), re-written the files decryptor.py, encryptor.py, key_generation.py and utility_functions.py into the files asymmetric_encryption, symmetric_encryption and work_with_files." />
+    <MESSAGE value="key_generation.py, decryptor.py and encryptor.py moved to trash_bin directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="key_generation.py, decryptor.py and encryptor.py moved to trash_bin directory" />
   </component>
 </project>
