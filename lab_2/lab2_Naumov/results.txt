@@ -1,0 +1,11 @@
+Frequency Test:
+C++: 0.595883
+Java: 0.479500
+
+Runs Test:
+C++: 0.389284
+Java: 0.198214
+
+Longest Run Test:
+C++: 0.496237
+Java: 0.256461
